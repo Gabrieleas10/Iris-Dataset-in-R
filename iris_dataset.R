@@ -60,6 +60,5 @@ print(result) # the most frequency result in this column
 
 
 # Dataset Analysis:
-
 cor(df$Sepal.Length, df$Sepal.Width,
     method = "spearman")
