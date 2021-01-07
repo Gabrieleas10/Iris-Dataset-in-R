@@ -47,3 +47,19 @@ print(IQR(df$Sepal.Length) == (q3 - q1))
 # Standard deviation and variance
 sd(df$Sepal.Length) # standard deviation: s able to identify the “error” in a data set.
 var(df$Sepal.Length) # variance: is a measure of dispersion that shows the distant distance each value in this set is from the average value
+
+# Mode
+# Creating the function
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+result <- getmode(df$Sepal.Length)
+print(result) # the most frequency result in this column
+
+
+# Dataset Analysis:
+
+cor(df$Sepal.Length, df$Sepal.Width,
+    method = "spearman")
